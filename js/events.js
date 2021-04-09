@@ -1,43 +1,43 @@
-AFRAME.registerComponent('markerhandler', {
-
+AFRAME.registerComponent('accepts-clicks', {
     init: function () {
-        const marker = document.querySelector('#sentient');
-        const box = document.querySelector('#truck');
-
-        let selected = false;
-        let origX = 0.0;
-        let endX = 0.0;
-        let deltaX = 0.0;
-        const rotationSpeed = 0.5;
-
-        marker.addEventListener('mousedown', function (ev, target) {
-            const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
-            if (box && intersectedElement === box) {
-                selected = true;
-                origX = ev.clientX;
-            }
-
-            function onMouseMove(ev) {
-                if (selected) {
-                    endX = ev.clientX;
-                    if (origX && endX) {
-                        deltaX = origX - endX;
-
-                        const rotation = box.getAttribute('rotation');
-                        const newY = rotation.y - deltaX * rotationSpeed;
-                        box.setAttribute('rotation', { x: rotation.x, y: newY, z: rotation.z });
-                    }
-                    origX = endX;
-                }
-            }
-
-            document.addEventListener('mousemove', onMouseMove);
-
-            marker.addEventListener('mouseup', function (ev, target) {
-                selected = false;
-                document.removeEventListener('mousemove', onMouseMove);
-                marker.onmouseup = null;
-            });
-        });
+        this.el.addEventListener('touchend', handleClickEvent);
+        this.el.addEventListener('click', handleClickEvent);
+    },
+    tick: function () {
+        hideSpeechBubbleIfNoMarker();
     }
 });
+
+function hideSpeechBubbleIfNoMarker() {
+    var speechBubble = document.querySelector(".speech-bubble");
+    if (speechBubble.style.display === 'none' || !speechBubble.style.display) return;
+
+    var shouldHide = true;
+    builders.forEach(function (builder) {
+        var builderMarker = document.querySelector("#" + builder.name);
+        if (builderMarker && builderMarker.object3D.visible) shouldHide = false;
+    });
+
+    if (shouldHide) speechBubble.style.display = 'none';
+};
+
+function handleClickEvent() {
+    builders.forEach(function (builder) {
+        var builderMarker = document.querySelector("#" + builder.name);
+        if (builderMarker && builderMarker.object3D.visible) {
+            toggleSpeechBubble(builder.dialogue);
+        }
+
+    });
+}
+
+function toggleSpeechBubble(dialogue) {
+    var speechBubble = document.querySelector(".speech-bubble");
+    if (speechBubble.style.display === 'none' || !speechBubble.style.display) {
+        speechBubble.innerHTML = dialogue;
+        speechBubble.style.display = 'block';
+    } else {
+        speechBubble.style.display = 'none';
+    }
+
+};
