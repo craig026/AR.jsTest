@@ -6,7 +6,12 @@
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs cursor="rayOrigin: mouse" accepts-clicks>
         <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
-            <a-marker-camera id='sentient' type='pattern' url='markers/pattern-logo.patt'></a-marker-camera>
+            <a-marker-camera id='sentient' type='pattern' url='markers/pattern-logo.patt'>
+                <a-entity position="0 0.5 0"
+                          rotation="0 0 0"
+                          scale="0.3 0.3 0.3"
+                          gltf-model="https://craig026.github.io/AR.jsTest/models/haultruck.gltf"></a-entity>
+            </a-marker-camera>
             <a-entity camera></a-entity>
         </a-scene>
     </body>
