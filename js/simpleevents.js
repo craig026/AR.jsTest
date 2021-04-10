@@ -6,5 +6,8 @@ AFRAME.registerComponent('accepts-clicks', {
 });
 
 function handleClickEvent() {
-    window.location = 'https://www.google.com/';
+    var marker = document.querySelector("#" + "pattern-logo");
+    if (marker.object3D.visible) {
+        window.location = 'https://sencom.com.au/'
+    };
 }
