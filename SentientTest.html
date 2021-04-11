@@ -42,13 +42,13 @@
     <div class="buttons">
       <button class="say-hi-button">Hi! Tap on the screen to visit the Sentient website.</button>
     </div>
-        <a-scene embedded arjs >
-            <a-marker-camera type='pattern' url='markers/pattern-logo.patt'>
+        <a-scene embedded arjs cursor="rayOrigin: mouse" accepts-clicks>
+            <a-marker-camera id='sentient' type='pattern' url='markers/pattern-logo.patt'>
                 <a-entity position="0 0.5 0"
                           rotation="0 0 0"
                           scale="0.3 0.3 0.3"
                           gltf-model="https://craig026.github.io/AR.jsTest/models/haultruck.gltf"></a-entity>
-            </a-marker-camera>s
+            </a-marker-camera>
             <a-entity camera></a-entity>
         </a-scene>
     </body>
