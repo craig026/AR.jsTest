@@ -6,23 +6,15 @@ AFRAME.registerComponent('accepts-clicks', {
     }
 });
 
-function handleClickEvent() {
-    window.location = 'https://sencom.com.au/';
-};
+//function handleClickEvent() {
+    //window.location = 'https://sencom.com.au/';
+//};
 
 function showText() {
     var marker = document.querySelector("pattern-logo");
-    if (marker && marker.object3D.visible) {
-        setUpButton();
-    }
-};
-
-function setUpButton() {
     var button = document.querySelector(".button");
-    if (button.style.display === 'none' || !button.style.display) {
+    if (marker && marker.object3D.visible) {
         button.innerHTML = "This is a model!";
-        button.style.display = 'block';
-    } else {
-        button.style.display = 'none';
+        button.style.display = "block";
     }
 };
