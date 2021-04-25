@@ -6,9 +6,9 @@ AFRAME.registerComponent('accepts-clicks', {
     }
 });
 
-function handleClickEvent() {
+/*function handleClickEvent() {
     window.location = 'https://sencom.com.au/';
-};
+};*/
 
 /*function showText() {
     var marker = document.querySelector("pattern-logo");
