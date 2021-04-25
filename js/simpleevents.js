@@ -13,7 +13,7 @@ AFRAME.registerComponent('accepts-clicks', {
 function showText() {
     var marker = document.querySelector("pattern-logo");
     var text = document.querySelector("text");
-    if (marker && marker.object3D.visible) {
+    if (marker.object3D.visible == true) {
         text.innerHTML = "This is a model!";
         text.style.display = "block";
     }
