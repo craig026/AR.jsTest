@@ -12,6 +12,6 @@ AFRAME.registerComponent('accepts-clicks', {
     }
 });
 
-function handleClickEvent() {
+/*function handleClickEvent() {
     window.location = 'https://sencom.com.au/';
-};
+};*/
