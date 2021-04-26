@@ -4,25 +4,38 @@ AFRAME.registerComponent('accepts-clicks', {
         //this.el.addEventListener('click', handleClickEvent);
         //this.el.addEventListener('showButton', showButtonEvent);
 
-
-        //document.querySelector(".say-hi-button")
-            
+        this.marker = document.querySelector("a-marker");
+        this.markervisible = false;
 
         document
             .querySelector(".say-hi-button")
             .style.display = "none"
             .addEventListener("click", function () {
                 window.location = 'https://sencom.com.au/';
-                })
-
-        document.querySelector("a-marker")
-            .addEventListener("markerFound", (e) => {
-                document.querySelector(".say-hi-button")
-                .style.display = "block";
             })
+    },
 
-    }
+    tick: function () {
+        if (!this.marker) return;
+        if (this.marker.object3D.visible) {
+            if (!this.markervisible) {
+                // marker detected
+                this.markervisible = true
+                document.querySelector(".say-hi-button")
+                    .style.display = "block"
+            }
+        } else {
+            if (this.markervisible) {
+                // lost sight of the marker
+                this.markervisible = false
+                document.querySelector(".say-hi-button")
+                    .style.display = "none"
+            }
+        }
+    },
 });
+
+
 
 function showButtonEvent() {
 
