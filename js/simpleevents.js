@@ -3,12 +3,7 @@ AFRAME.registerComponent('accepts-clicks', {
         //this.el.addEventListener('touchend', handleClickEvent);
         //this.el.addEventListener('click', handleClickEvent);
         //this.el.addEventListener('showButton', showButtonEvent);
-		/*var m = document.querySelector("a-marker")
-		    m.addEventListener("markerFound", (e)=>{
-		var text = document.querySelector("text");
-			text.innerHTML = "This is a model!";
-			text.style.display = "block";
-		})*/
+
 
         //document.querySelector(".say-hi-button")
             
@@ -18,8 +13,13 @@ AFRAME.registerComponent('accepts-clicks', {
             .style.display = "none"
             .addEventListener("click", function () {
                 window.location = 'https://sencom.com.au/';
-            })
+                })
 
+        document.querySelector("a-marker")
+            .addEventListener("markerFound", (e) => {
+                document.querySelector(".say-hi-button")
+                .style.display = "block";
+            })
 
     }
 });
