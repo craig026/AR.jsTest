@@ -10,14 +10,17 @@ AFRAME.registerComponent('accepts-clicks', {
 			text.style.display = "block";
 		})*/
 
-        document.querySelector(".say-hi-button")
-            .style.display = "none";
+        //document.querySelector(".say-hi-button")
+            
 
         document
             .querySelector(".say-hi-button")
+            .style.display = "none"
             .addEventListener("click", function () {
                 window.location = 'https://sencom.com.au/';
-        })
+            })
+
+
     }
 });
 
