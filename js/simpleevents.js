@@ -4,8 +4,8 @@ AFRAME.registerComponent('accepts-clicks', {
         //this.el.addEventListener('click', handleClickEvent);
         //this.el.addEventListener('showButton', showButtonEvent);
 
-        this.marker = document.querySelector("a-marker");
-        this.markervisible = false;
+        //this.marker = document.querySelector("a-marker");
+        //this.markervisible = false;
 
         document
             .querySelector(".say-hi-button")
