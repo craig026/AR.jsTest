@@ -15,7 +15,7 @@ AFRAME.registerComponent('accepts-clicks', {
             })
     },
 
-    tick: function () {
+    /*tick: function () {
         if (!this.marker) return;
         if (this.marker.object3D.visible) {
             if (!this.markervisible) {
@@ -32,7 +32,7 @@ AFRAME.registerComponent('accepts-clicks', {
                     .style.display = "none"
             }
         }
-    },
+    },*/
 });
 
 
