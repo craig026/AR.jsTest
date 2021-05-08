@@ -46,12 +46,12 @@
     </div>
         <a-scene embedded arjs cursor="rayOrigin: mouse" accepts-clicks>
             <a-marker id='sentient' type='pattern' url='markers/pattern-logo.patt'>
-                <a-entity position="0 0.5 0"
-                          rotation="0 0 0"
-                          scale="0.3 0.3 0.3"
-                          gltf-model="https://craig026.github.io/AR.jsTest/models/sentienthaultruck.gltf"
-                          animation-mixer="clip: Take 001; loop:repeat"
-                          light="type: ambient; color: #CCC"></a-entity>
+                <a-gltf-model src="https://craig026.github.io/AR.jsTest/models/sentienthaultruck.gltf" 
+                              position="0 0.5 0"
+                              rotation="0 0 0"
+                              scale="0.3 0.3 0.3"
+                              animation-mixer="clip: Take 001; loop:repeat">
+                </a-gltf-model>
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
