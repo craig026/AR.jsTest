@@ -1,7 +1,7 @@
 AFRAME.registerComponent('accepts-clicks', {
     init: function () {
-        //this.el.addEventListener('touchend', handleClickEvent);
-        //this.el.addEventListener('click', handleClickEvent);
+        this.el.addEventListener('touchend', handleClickEvent);
+        this.el.addEventListener('click', handleClickEvent);
         //this.el.addEventListener('showButton', showButtonEvent);
 
         //this.marker = document.querySelector("a-marker");
