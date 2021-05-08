@@ -7,12 +7,12 @@ AFRAME.registerComponent('accepts-clicks', {
         //this.marker = document.querySelector("a-marker");
         //this.markervisible = false;
 
-        document
+        /*document
             .querySelector(".say-hi-button")
             .style.display = "none"
             .addEventListener("click", function () {
                 window.location = 'https://sencom.com.au/';
-            })
+            })*/
     },
 
     /*tick: function () {
