@@ -19,7 +19,7 @@
     </script>
 
     <style>
-      .arjs-loader {
+      /*.arjs-loader {
         height: 100%;
         width: 100%;
         position: absolute;
@@ -36,7 +36,7 @@
         text-align: center;
         font-size: 1.25em;
         color: white;
-      }
+      }*/
 
     /*.buttons {
       position: absolute;
@@ -69,11 +69,13 @@
     <!--<div class="buttons">-->
       <!--<button class="say-hi-button">Haul Truck dumping material into primary crusher.</button>-->
     <!--</div>-->
-        <a-scene embedded arjs cursor="rayOrigin: mouse" accepts-clicks>
+        <a-scene 
+        vr-mode-ui="enabled: false;"
+        embedded arjs cursor="rayOrigin: mouse" accepts-clicks>
             <a-marker id='sentient' type='pattern' url='markers/pattern-truck-marker.patt'>
                 <a-gltf-model src="https://craig026.github.io/AR.jsTest/models/sentienthaultruckfull.gltf" 
                               position="0 0 0"
-                              rotation="90 0 270"
+                              rotation="0 90 270"
                               scale="0.1 0.1 0.1"
                               animation-mixer="loop:repeat">
                 </a-gltf-model>
