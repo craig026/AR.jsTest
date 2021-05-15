@@ -1,0 +1,50 @@
+﻿<html>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+<style>
+  .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(25, 151, 166, 1.0);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
+</style>
+
+    <body style="margin : 0px; overflow: hidden;">
+      <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
+    <div class="arjs-loader">
+      <div>Loading, please wait...</div>
+    </div>
+        <a-scene 
+        vr-mode-ui="enabled: false;"
+        renderer="logarithmicDepthBuffer: true;"
+        embedded 
+        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+        >
+            <a-marker id='sentient' type='pattern' url='markers/pattern-truck-marker.patt'>
+                <a-gltf-model src="https://craig026.github.io/AR.jsTest/models/sentienthaultruckfull.gltf" 
+                              position="0 0 0"
+                              rotation="0 90 270"
+                              scale="0.1 0.1 0.1"
+                              animation-mixer="loop:repeat">
+                </a-gltf-model>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
