@@ -16,6 +16,9 @@
     </script>
 <style>
   
+  body {
+    background-image: "https://craig026.github.io/AR.jsTest/images/SentientBackground.png";
+  }
 
   .arjs-loader {
     height: 100%;
@@ -77,7 +80,7 @@
 
       <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
     <div class="arjs-loader" id="loader-background">
-      <img class="sentientlogo" src="https://craig026.github.io/AR.jsTest/images/SentientLogo.JPG" style="width:100%">
+      <img class="sentientlogo" src="https://craig026.github.io/AR.jsTest/images/SentientBackground.png" style="width:100%">
       <div class="intro-text">
       <h1><b>Welcome!</b></h1>
       <p>The first stage in 'pit-to-port' mining is raw material extraction.</p>
@@ -93,7 +96,7 @@
         embedded arjs cursor="rayOrigin: mouse" accepts-clicks>
             <a-marker id='sentient' type='pattern' url='markers/pattern-truck-marker.patt'>
                 <a-gltf-model src="https://craig026.github.io/AR.jsTest/models/sentienthaultrucklatest.glb" 
-                              position="-2 0 0"
+                              position="-1 0 0"
                               rotation="0 90 270"
                               scale="0.1 0.1 0.1"
                               animation-mixer="loop:repeat">
