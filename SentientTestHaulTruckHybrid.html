@@ -15,13 +15,8 @@
     };
     </script>
 <style>
-  
-  body {
-    background-image: "https://craig026.github.io/AR.jsTest/images/SentientBackground.png";
-    background-color: #cccccc;
-  }
 
-  /*.arjs-loader {
+  .arjs-loader {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -32,18 +27,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }*/
+  }
 
-  /*.sentientlogo {
+  .sentientlogo {
     height: 100%;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     justify-content: center;
-  }*/
+    text-align: center;
+    color: white;
+  }
 
   .intro-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 70%;
     font-size: 15px;
     font-family: "Segoe UI";
@@ -81,8 +82,8 @@
     <body style="margin : 0px; overflow: hidden;">
 
       <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
-    <!--<div class="arjs-loader" id="loader-background">-->
-      <!--<img class="sentientlogo" src="https://craig026.github.io/AR.jsTest/images/SentientBackground.png" style="width:100%">-->
+    <div class="arjs-loader" id="loader-background">
+      <img class="sentientlogo" src="https://craig026.github.io/AR.jsTest/images/SentientBackground.png" style="width:100%">
       <div class="intro-text">
       <h1><b>Welcome!</b></h1>
       <p>The first stage in 'pit-to-port' mining is raw material extraction.</p>
@@ -91,7 +92,7 @@
       <div class="buttons" id="button">
       <button class="say-hi-button">Start AR</button>
       </div>
-    <!--</div>-->
+    </div>
         <a-scene 
         vr-mode-ui="enabled: false;"
         renderer="logarithmicDepthBuffer: true;"
