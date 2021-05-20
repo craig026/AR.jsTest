@@ -4,8 +4,16 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/events.js"></script>
+    <!--<script src="js/events.js"></script>-->
     <script>
+      AFRAME.registerComponent('markerhandler', {
+    init: function () {
+      this.el.sceneEl.addEventListener('markerFound', () => {
+        // redirect to custom URL
+        window.location = 'https://github.com/AR-js-org/AR.js';
+      });
+  });
+  },
     /*window.onload = function () {
       document
         .querySelector(".say-hi-button")
