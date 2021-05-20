@@ -30,8 +30,11 @@ function handleClickEvent() {
 
     });*/
     var background = document.querySelector(".arjs-loader");
-    background.style.display = 'block';
-    background.innerHTML = "Marker Found!";
+    if (background.style.display === 'none') {
+        background.style.display = 'block';
+        background.innerHTML = "Marker Found!";
+    }
+
 }
 
 /*function toggleSpeechBubble(dialogue) {
