@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--<script src="js/events.js"></script>-->
     <script>
-        AFRAME.registerComponent('sentient', {
+        AFRAME.registerComponent('markerhandler', {
             init: function () {
                 this.el.sceneEl.addEventListener('markerFound', () => {
                 // redirect to custom URL e.g. google.com
@@ -114,7 +114,7 @@
         vr-mode-ui="enabled: false;"
         renderer="logarithmicDepthBuffer: true;"
         embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; sourceWidth:1280; sourceHeight:960; displayWidth:1280; displayHeight:960;" cursor="rayOrigin: mouse" accepts-clicks>
-            <a-marker-camera id='sentient' type='pattern' url='markers/pattern-truck-marker.patt'>
+            <a-marker-camera markerhandler id='sentient' type='pattern' url='markers/pattern-truck-marker.patt'>
                 <a-gltf-model src="https://craig026.github.io/AR.jsTest/models/sentienthaultrucklatest.glb" 
                               position="-1.5 0 0"
                               rotation="0 90 270"
