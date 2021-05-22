@@ -1,7 +1,14 @@
 AFRAME.registerComponent('markerhandler', {
     init: function () {
-        this.marker = document.querySelector("#animated-marker");
-        this.markerVisible = false;
+        var marker = document.querySelector("#animated-marker")
+
+        marker.addEventListener("markerFound", (e) => {
+            console.log("found")
+        })
+
+        marker.addEventListener("markerLost", (e) => {
+            console.log("lost")
+        })
         //this.el.addEventListener('touchend', handleClickEvent);
         //this.el.addEventListener('click', handleClickEvent);
         //this.el.addEventListener('showButton', showButtonEvent);
@@ -17,7 +24,7 @@ AFRAME.registerComponent('markerhandler', {
             })*/
     },
 
-    tick: function () {
+    /*tick: function () {
         if (!this.marker) return;
         if (this.marker.object3D.visible) {
             if (!this.markervisible) {
@@ -34,7 +41,7 @@ AFRAME.registerComponent('markerhandler', {
                     .style.display = "none"
             }
         }
-    },
+    },*/
 });
 
 
