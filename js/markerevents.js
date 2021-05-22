@@ -3,10 +3,8 @@ AFRAME.registerComponent('markerhandler', {
         var marker = document.querySelector("#animated-marker")
 
         marker.addEventListener("markerFound", (e) => {
-            console.log(document.querySelector(".sentientlogo").style.opacity)
                 document.querySelector(".show-details-button").style.display = "block"
                 console.log("found")
-
         })
 
         marker.addEventListener("markerLost", (e) => {

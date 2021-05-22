@@ -4,7 +4,7 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/markerevents.js"></script>
+    <!--<script src="js/markerevents.js"></script>-->
     <script>
     /*window.onload = function () {
       document
@@ -19,8 +19,22 @@
         $(".say-hi-button").click(function(){
             $(".sentientlogo").fadeOut();
             $(".intro-text").fadeOut();
-            $(".say-hi-button").fadeOut();
+            $(".say-hi-button").fadeOut(function () {
+                var marker = document.querySelector("#animated-marker")
+
+                    marker.addEventListener("markerFound", (e) => {
+                            document.querySelector(".show-details-button").style.display = "block"
+                            console.log("found")
+                    })
+                },
+            );
         });
+    });
+
+    $(document).ready(function(){
+        $(".show-details-button").click(function(){
+            $(".say-hi-button").fadeIn();  
+		});
     });
     </script>
 
