@@ -6,17 +6,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--<script src="js/handleclickevents.js"></script>-->
     <script>
-    window.onload = function () {
+    /*window.onload = function () {
       document
         .querySelector(".say-hi-button")
-        .addEventListener("click", function (ev, target) {
-            const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
-            if (aEntity && intersectedElement === aEntity) {
-                window.location = 'https://sencom.com.au/';
-            }
+        .addEventListener("click", function () {
+           //window.location = 'https://sencom.com.au/';           
+           document.getElementById("loader-background").style.display = "none";
 
         });
-    };
+    };*/
     $(document).ready(function(){
         $(".say-hi-button").click(function(){
             $(".arjs-loader").fadeOut();
