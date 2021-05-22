@@ -10,8 +10,11 @@
       document
         .querySelector(".say-hi-button")
         .addEventListener("click", function () {
-           window.location = 'https://sencom.com.au/';           
+        if(.querySelector(".arjs-loader").style.display === "none"){
+                   window.location = 'https://sencom.com.au/';           
            //document.getElementById("loader-background").style.display = "none";
+		}
+
 
         });
     };
