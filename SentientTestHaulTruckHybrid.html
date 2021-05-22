@@ -36,7 +36,9 @@
         document
             .querySelector(".show-details-button")
             .addEventListener("click", function(){
-                document.querySelector("#animated-model").setAttribute("animation-mixer", "TestAnim")
+                document.querySelector("#animated-model").setAttribute("animation-mixer", {
+                clip: TestAnim,
+                loop: once})
                 console.log("TestAnim called!")
         });
 	};
