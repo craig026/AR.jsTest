@@ -17,7 +17,7 @@
     };*/
     $(document).ready(function(){
         $(".say-hi-button").click(function(){
-            $(".arjs-loader").fadeOut();
+            $(".sentientlogo").fadeOut();
         });
     });
     </script>
@@ -101,10 +101,11 @@
 
     <body style="margin : 0px; overflow: hidden;">
 
-    <button class="show-details-button">Show Details</button>
+
 
       <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
-    <div class="arjs-loader" id="loader-background">
+    <div>
+      <div class="arjs-loader" id="loader-background">
       <img class="sentientlogo" src="https://craig026.github.io/AR.jsTest/images/SentientBackground.png" style="width:100%">
       <div class="intro-text">
       <h1><b>Welcome!</b></h1>
@@ -112,8 +113,8 @@
       <p>Tap the 'Start AR' button below to see how iron ore is delivered to a primary crusher for processing.</p>
       </div>
       <div class="buttons" id="button">
-      <button class="say-hi-button">Start AR</button>
-
+        <button class="say-hi-button">Start AR</button>
+        <button class="show-details-button">Show Details</button>
       </div>
     </div>
 
