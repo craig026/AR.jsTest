@@ -36,10 +36,12 @@
         document
             .querySelector(".show-details-button")
             .addEventListener("click", function(){
-                document.querySelector("#animated-model").setAttribute("animation-mixer", {
-                clip: Bottom,
-                loop: once})
-                console.log("TestAnim called!")
+                document
+                    .querySelector("#animated-model")
+                    .setAttribute('animation-mixer', {
+                        clip: 'TestAnim',
+                        loop: once,})
+                    console.log("TestAnim called!")
         });
 	};
     </script>
