@@ -3,13 +3,13 @@ AFRAME.registerComponent('markerhandler', {
         var marker = document.querySelector("#animated-marker")
 
         marker.addEventListener("markerFound", (e) => {
-            document.querySelector(".show-details-button").style.display = "block"
-            //console.log("found")
+            //document.querySelector(".show-details-button").style.display = "block"
+            console.log("found")
         })
 
         marker.addEventListener("markerLost", (e) => {
-            document.queryselector(".show-details-button").style.display = "none"
-            //console.log("lost")
+            //document.queryselector(".show-details-button").style.display = "none"
+            console.log("lost")
         })
         //this.el.addEventListener('touchend', handleClickEvent);
         //this.el.addEventListener('click', handleClickEvent);
