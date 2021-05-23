@@ -23,8 +23,13 @@
                 var marker = document.querySelector("#animated-marker")
 
                     marker.addEventListener("markerFound", (e) => {
-                            document.querySelector(".show-details-button").style.display = "block"
-                            console.log("found")
+                        document
+                            .querySelector("#animated-model")
+                            .setAttribute('animation-mixer', {
+                                clip: 'BusinessCardAnimation',
+                                loop: 'once',})
+                            //document.querySelector(".show-details-button").style.display = "block"
+                                console.log("found")
                     })
                 },
             );
@@ -39,7 +44,7 @@
                 document
                     .querySelector("#animated-model")
                     .setAttribute('animation-mixer', {
-                        clip: 'TestAnim',
+                        clip: 'BusinessCardAnimation',
                         loop: 'repeat',})
                     console.log("TestAnim called!")
         });
@@ -150,8 +155,7 @@
                                   id="animated-model"
                                   position="0 0 0"
                                   rotation="0 90 0"
-                                  scale="0.5 0.5 0.5"
-                                  animation-mixer="loop:repeat">
+                                  scale="0.5 0.5 0.5">
                     </a-gltf-model>
                 </a-marker>
             </a-entity>
