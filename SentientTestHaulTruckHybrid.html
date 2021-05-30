@@ -27,7 +27,7 @@
                 var marker = document.querySelector("#animated-marker")
 
                     marker.addEventListener("markerFound", (e) => {
-                            document.querySelector(".show-details-button").style.display = "block"
+                            $(".show-details-button").fadeIn();
                             console.log("found")
                     })
                 },
@@ -115,7 +115,7 @@
    .show-details-button{
        padding: 10px;
        border-radius: 30px;
-       width: 150px;
+       width: 250px;
        border: none;
        background: white;
        color: black;
