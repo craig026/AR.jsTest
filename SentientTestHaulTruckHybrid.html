@@ -19,16 +19,20 @@
 
         });
     };*/
+    
+    var x = "";
+
     $(document).ready(function(){
         $(".say-hi-button").click(function(){
             $(".sentientlogo").fadeOut();
             $(".intro-text").fadeOut();
             $(".say-hi-button").fadeOut(function () {
-                var marker = document.querySelector("#animated-marker")
-
+                var marker = document.querySelector("#animated-marker")        
                     marker.addEventListener("markerFound", (e) => {
+                        if(Boolean(x) = false){
                             $(".show-details-button").fadeIn();
                             console.log("found")
+					    }
                     })
                 },
             );
@@ -47,6 +51,7 @@
                         loop: 'repeat',})
                     console.log("TestAnim called!")
                     $(".show-details-button").fadeOut();
+                    x = "Animation found!";
         });
 	};
     </script>
@@ -115,7 +120,7 @@
    .show-details-button{
        padding: 10px;
        border-radius: 30px;
-       width: 250px;
+       width: 200px;
        border: none;
        background: white;
        color: black;
