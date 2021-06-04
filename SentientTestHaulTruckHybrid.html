@@ -50,10 +50,21 @@
                         clip: 'TruckAnimation',
                         loop: 'repeat',})
                     console.log("TestAnim called!")
-                    $(".show-details-button").fadeOut();
+                $(".show-details-button").fadeOut();
+                $(".more-info-text").fadeIn();
                     x = "Animation found!";
         });
 	};
+    </script>
+    <script>
+        window.onload = function(){
+            document.queryselector(".more-info-button")
+                .addEventListener("click", function () {
+                    $(".more-info-button").fadeIn();
+                    document
+                        .querySelector(".more-info-button").value = "Hide";
+                });
+        };
     </script>
 
 <style>
@@ -130,6 +141,31 @@
        display: none;
    }
 
+    .more-info-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        font-size: 15px;
+        font-family: "Segoe UI";
+        color: white;
+        text-align: center;
+    }
+
+    .more-info-button {
+        padding: 10px;
+        border-radius: 30px;
+        width: 200px;
+        border: none;
+        background: white;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Segoe UI";
+        display: none;
+    }
+
 
 </style>
 
@@ -144,9 +180,15 @@
       <p>The first stage in 'pit-to-port' mining is raw material extraction.</p>
       <p>Tap the 'Start AR' button below to see how iron ore is delivered to a primary crusher for processing.</p>
       </div>
+      <img class="more-info-image" src="">
+      <div class="more-info-text">
+      <p>For more information about our Augmented Reality capabilities, click the link below!</p>
+      </div>
+      </div>
       <div class="buttons" id="button">
         <button class="say-hi-button">Start AR</button>
         <button class="show-details-button">Begin Crushing!</button>
+        <button class="more-info-button">More Info</button>
       </div>
     </div>
 
