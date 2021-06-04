@@ -138,10 +138,10 @@
        font-size: 20px;
        font-weight: bold;
        font-family: "Segoe UI";
-       /*display: none;*/
+       display: none;
    }
 
-    /*.more-info-text {
+    .more-info-text {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -165,7 +165,7 @@
         font-weight: bold;
         font-family: "Segoe UI";
         display: none;
-    }*/
+    }
 
 
 </style>
@@ -181,20 +181,21 @@
                 <p>The first stage in 'pit-to-port' mining is raw material extraction.</p>
                 <p>Tap the 'Start AR' button below to see how iron ore is delivered to a primary crusher for processing.</p>
             </div>
+            <div class="more-info-text">
+            <p>For more information about our Augmented Reality capabilities, click the link below!</p>
+            </div>
         <!--</div>-->
         <div class="buttons" id="button">
             <button class="say-hi-button">Start AR</button>
             <button class="show-details-button">Begin Crushing!</button>
-            <!--<button class="more-info-button">More Info</button>-->
+            <button class="more-info-button">More Info</button>
         </div>
     </div>
 
 
     <!--><div>
         <img class="more-info-image" src="">
-        <div class="more-info-text">
-            <p>For more information about our Augmented Reality capabilities, click the link below!</p>
-        </div>
+
     </div>-->
     <a-scene vr-mode-ui="enabled: false;"
              renderer="logarithmicDepthBuffer: true;"
