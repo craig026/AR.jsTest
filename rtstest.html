@@ -59,13 +59,19 @@
 	};
     </script>
     <script>
-    window.onload = function(){
+    $(document).ready(function(){
+        $(".more-info-button").click(function(){
+            window.location = 'https://sencom.com.au/';
+	    });
+	});
+
+    /*window.onload = function(){
         document
             .querySelector(".more-info-button")
             .addEventListener("moreinfo", function(){
                 window.location = 'https://sencom.com.au/';   
 			});
-	};
+	};*/
     </script>
 
 <style>
