@@ -50,7 +50,7 @@
                         clip: 'TruckAnimation',
                         loop: 'repeat',})
                     console.log("TestAnim called!")
-                    .querySelector(".show-details-button").innerText = "More Info";
+                    $(".show-details-button").text($(".show-details-button").data("More Info"));
                     //$(".more-info-button").fadeIn();
                     x = "Animation found!";
         });
