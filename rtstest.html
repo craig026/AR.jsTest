@@ -62,6 +62,9 @@
     $(document).ready(function(){
         $(".more-info-button").click(function(){
             window.location = 'https://sencom.com.au/';
+            $(".more-info-text").fadeOut();
+            document
+                .querySelector(".more-info-button").innerText = "Loading...";
 	    });
 	});
 
