@@ -31,6 +31,7 @@
                     marker.addEventListener("markerFound", (e) => {
                         if(Boolean(x) == false){
                             $(".show-details-button").fadeIn();
+                            $(".show-details-button").content = "Begin Crushing!";
                             console.log("found")
 					    }
                     })
@@ -160,7 +161,7 @@
       </div>
       <div class="buttons" id="button">
         <button class="say-hi-button">Start AR</button>
-        <button class="show-details-button">Begin Crushing!</button>
+        <button class="show-details-button"></button>
         <button class="more-info-button">More Info</button>
       </div>
     </div>
