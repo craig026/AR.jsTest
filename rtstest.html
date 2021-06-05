@@ -31,7 +31,6 @@
                     marker.addEventListener("markerFound", (e) => {
                         if(Boolean(x) == false){
                             $(".show-details-button").fadeIn();
-                            $(".show-details-button").content = "Begin Crushing!";
                             console.log("found")
 					    }
                     })
@@ -51,8 +50,8 @@
                         clip: 'TruckAnimation',
                         loop: 'repeat',})
                     console.log("TestAnim called!")
-                    $(".show-details-button").content = "More Info";
-                    //$(".more-info-button").fadeIn();
+                    $(".show-details-button").style.display = "none";
+                    $(".more-info-button").fadeIn();
                     x = "Animation found!";
         });
 	};
@@ -161,7 +160,7 @@
       </div>
       <div class="buttons" id="button">
         <button class="say-hi-button">Start AR</button>
-        <button class="show-details-button"></button>
+        <button class="show-details-button">Begin Crushing!</button>
         <button class="more-info-button">More Info</button>
       </div>
     </div>
