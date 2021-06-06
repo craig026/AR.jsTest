@@ -26,14 +26,22 @@
         $(".say-hi-button").click(function(){
             $(".sentientlogo").fadeOut();
             $(".intro-text").fadeOut();
+
             $(".say-hi-button").fadeOut(function () {
-                var marker = document.querySelector("#animated-marker")        
-                    marker.addEventListener("markerFound", (e) => {
+                if(document.querySelector("#animated-marker").object3D.visible){
+                      $(".show-details-button").fadeIn();              
+				}
+                else{
+                    $(".shipinstruction").fadeIn();
+                    var marker = document.querySelector("#animated-marker")
+				    marker.addEventListener("markerFound", (e) => {
                         if(Boolean(x) == false){
                             $(".show-details-button").fadeIn();
+                            $(".shipinstruction").fadeOut();
                             console.log("found")
 					    }
                     })
+                } 
                 },
             );
         });
@@ -100,6 +108,17 @@
     justify-content: center;
     text-align: center;
     color: white;
+  }
+
+  .shipinstruction {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    display: none;
   }
 
   .intro-text{
@@ -187,6 +206,7 @@
     <div>
       <div class="arjs-loader" id="loader-background">
       <img class="sentientlogo" src="https://craig026.github.io/AR.jsTest/RTS/port/images/ShipWebBackground.png" style="width:100%">
+      <img class="shipinstruction" src="https://craig026.github.io/AR.jsTest/RTS/port/images/TransparentShipGuide.png" style="width:100%">
       <div class="intro-text">
       <h1><b>Welcome!</b></h1>
       <p>Once the material reaches the port, ships transport it to market where it is sold as products such a bullion bars or structural steel.</p>

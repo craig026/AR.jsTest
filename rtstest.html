@@ -28,10 +28,6 @@
             $(".intro-text").fadeOut();
 
             $(".say-hi-button").fadeOut(function () {
-                //document
-                    //.querySelector("#animated-model")
-                    //.removeAttribute("gltf-model")
-                    //.setAttribute('gltf-model', {src: 'https://craig026.github.io/AR.jsTest/models/sentienthaultrucklatest.glb'})
                 if(document.querySelector("#animated-marker").object3D.visible){
                       $(".show-details-button").fadeIn();              
 				}
@@ -114,7 +110,7 @@
     color: white;
   }
 
-   .truckinstruction {
+  .truckinstruction {
     width: 100%;
     position: fixed;
     top: 0;
