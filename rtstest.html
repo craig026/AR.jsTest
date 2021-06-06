@@ -27,6 +27,10 @@
             $(".sentientlogo").fadeOut();
             $(".intro-text").fadeOut();
             $(".say-hi-button").fadeOut(function () {
+                document
+                    .querySelector("#animated-model")
+                    .removeAttribute("gltf-model")
+                    .setAttribute("gltf-model", "https://craig026.github.io/AR.jsTest/models/sentienthaultrucklatest.glb")
                 var marker = document.querySelector("#animated-marker")        
                     marker.addEventListener("markerFound", (e) => {
                         if(Boolean(x) == false){
