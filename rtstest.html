@@ -26,15 +26,17 @@
         $(".say-hi-button").click(function(){
             $(".sentientlogo").fadeOut();
             $(".intro-text").fadeOut();
+            $(".truckinstruction").fadeIn();
             $(".say-hi-button").fadeOut(function () {
-                //document
-                    //.querySelector("#animated-model")
+                document
+                    .querySelector("#animated-model")
                     //.removeAttribute("gltf-model")
                     //.setAttribute('gltf-model', {src: 'https://craig026.github.io/AR.jsTest/models/sentienthaultrucklatest.glb'})
                 var marker = document.querySelector("#animated-marker")        
                     marker.addEventListener("markerFound", (e) => {
                         if(Boolean(x) == false){
                             $(".show-details-button").fadeIn();
+                            $(".truckinstruction").fadeOut();
                             console.log("found")
 					    }
                     })
@@ -97,6 +99,16 @@
   }
 
   .sentientlogo {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+   .truckinstruction {
     width: 100%;
     position: fixed;
     top: 0;
@@ -191,6 +203,7 @@
     <div>
       <div class="arjs-loader" id="loader-background">
       <img class="sentientlogo" src="https://craig026.github.io/AR.jsTest/images/SentientBackground.png" style="width:100%">
+      <img class="truckinstruction" src="https://craig026.github.io/AR.jsTest/RTS/mine/images/TransparentHaulTruckGuide.png" style="width:100%">
       <div class="intro-text">
       <h1><b>Welcome!</b></h1>
       <p>The first stage in 'pit-to-port' mining is raw material extraction.</p>
