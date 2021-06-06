@@ -26,7 +26,7 @@
         $(".say-hi-button").click(function(){
             $(".sentientlogo").fadeOut();
             $(".intro-text").fadeOut();
-            $(".truckinstruction").fadeIn();
+
             $(".say-hi-button").fadeOut(function () {
                 //document
                     //.querySelector("#animated-model")
@@ -36,6 +36,7 @@
                       $(".show-details-button").fadeIn();              
 				}
                 else{
+                    $(".truckinstruction").fadeIn();
                     var marker = document.querySelector("#animated-marker")
 				    marker.addEventListener("markerFound", (e) => {
                         if(Boolean(x) == false){
