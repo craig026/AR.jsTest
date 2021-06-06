@@ -28,18 +28,23 @@
             $(".intro-text").fadeOut();
             $(".truckinstruction").fadeIn();
             $(".say-hi-button").fadeOut(function () {
-                document
-                    .querySelector("#animated-model")
+                //document
+                    //.querySelector("#animated-model")
                     //.removeAttribute("gltf-model")
                     //.setAttribute('gltf-model', {src: 'https://craig026.github.io/AR.jsTest/models/sentienthaultrucklatest.glb'})
-                var marker = document.querySelector("#animated-marker")        
-                    marker.addEventListener("markerFound", (e) => {
+                if(document.querySelector("#animated-marker").object3D.visible){
+                      $(".show-details-button").fadeIn();              
+				}
+                else{
+                    var marker = document.querySelector("#animated-marker")
+				    marker.addEventListener("markerFound", (e) => {
                         if(Boolean(x) == false){
                             $(".show-details-button").fadeIn();
                             $(".truckinstruction").fadeOut();
                             console.log("found")
 					    }
                     })
+                } 
                 },
             );
         });
@@ -116,6 +121,7 @@
     justify-content: center;
     text-align: center;
     color: white;
+    display: none;
   }
 
   .intro-text{
